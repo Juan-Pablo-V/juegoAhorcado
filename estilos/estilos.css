@@ -3,6 +3,15 @@ header, footer{
     text-align: center;
 }
 
+
+footer{
+    background-color: rgb(226, 102, 102);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
 #boton-iniciar{  
     background-color: rgb(226, 102, 102);
     color: rgb(243, 243, 243);
@@ -14,6 +23,8 @@ header, footer{
     margin: 30px auto;
     display: block;
 }
+
+
 
 #boton-nueva{
     color: rgb(226, 102, 102);
