@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,38 @@
     <title>Juego Ahorcado-ONE</title>
     <link rel="stylesheet" href="./estilos/estilos.css">
 </head>
+
 <body>
     <header>
         <h1>Juego del ahorcado</h1>
     </header>
     <main>
-        <button id="boton-iniciar">Iniciar Juego</button>
-        
-        <input type="text" name="" id="nueva-palabra">
-        <button id="boton-agregar">Agregar nueva palabra</button>
 
-        <div>
-            <canvas width="1200px" height="800"></canvas>
+        <div id="contenedor-inicio">
+            <button id="boton-iniciar">Iniciar Juego</button>
+
+            <button id="boton-nueva">Agregar nueva palabra</button>
+
         </div>
+
+        <div id="contenedor-agregar">
+
+            <br>
+            <div class="botones">
+                <input type="text" name="" id="nueva-palabra" placeholder="Ingrese una palabra">
+                <button id="boton-agregar">Guardar y empezar</button>
+                <button id="boton-cancelar">Desistir</button>
+            </div>
+
+
+        </div>
+
+
+        <canvas width="1200px" height="800"></canvas>
+        <div class="botones">
+            <button id="boton-nuevo">Nuevo juego</button>
+        </div>
+
     </main>
 
     <footer>
@@ -30,4 +50,5 @@
     <script src="./js/principal.js"></script>
     <script src="./js/agregar-palabra.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 function crearTablero() {
-    pincel.fillStyle = "rgb(250, 240, 240)";
+    pincel.fillStyle = "rgb(240, 240, 240)";
     pincel.fillRect(0, 0, 1200, 800);
     pincel.beginPath();
     pincel.fillStyle = "black";
@@ -7,19 +7,25 @@ function crearTablero() {
     pincel.lineTo(100, 750);
     pincel.lineTo(300, 750);
     pincel.fill();
+
+    incorrectas = "";
+    pasoAhorcado = 0;
+    aciertos = 0;
+    letrasPresionadas = "";
+
     document.addEventListener("keypress", teclaPresionada);
+    escogerPalabraSecreta();
+    crearGuiones(palabraSecreta);
 }
 
 function escogerPalabraSecreta() {
     var alteatorio = Math.floor(Math.random() * palabras.length);
     palabraSecreta = palabras[alteatorio];
-    crearTablero();
-    crearGuiones(palabraSecreta);
 }
 
 function crearGuiones(palabraSecreta) {
     var numeroGuiones = palabraSecreta.length;
-    pincel.fillStyle = "black";
+    pincel.fillStyle = "rgb(226, 102, 102)";
     for (var i = 0; i < numeroGuiones; i++) {
         pincel.fillRect(480 + (70 * i), 700, 40, 5);
     }
@@ -39,7 +45,7 @@ function teclaPresionada(evento) {
 
 function dibujarLetraCorrecta(letra, x, y) {
     pincel.font = "21px Georgia";
-    pincel.fillStyle = "black";
+    pincel.fillStyle = "rgb(226, 102, 102)";
     pincel.fillText(letra, x, y);
 }
 
@@ -123,8 +129,6 @@ function dibujarAhorcado() {
             pincel.moveTo(320,450);
             pincel.lineTo(370,400);
             pincel.stroke();
-            break;
-        case 9:
             finalizar();
             break;
 
@@ -166,4 +170,4 @@ var pincel = pantalla.getContext("2d");
 var botonInciar = document.querySelector("#boton-iniciar");
 
 
-botonInciar.onclick = escogerPalabraSecreta;
+botonInciar.onclick = crearTablero;
