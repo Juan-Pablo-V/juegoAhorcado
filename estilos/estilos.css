@@ -1,11 +1,9 @@
 
-
-
 header, footer{
     text-align: center;
 }
 
-#boton-iniciar{
+#boton-iniciar,#boton-agregar {
     
     background-color: rgb(226, 102, 102);
     color: rgb(240, 234, 234);
@@ -29,4 +27,12 @@ canvas{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+input{
+display: block;
+margin-right: auto;
+margin-left: auto;
+height: 25px;
+width: 240px;
 }
